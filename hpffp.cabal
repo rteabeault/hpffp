@@ -1,0 +1,164 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.1.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 30f0f18e854bee6543d39641c4ffb3fb2f0cf4388728f5c755bb373f5f3e14fe
+
+name:           hpffp
+version:        0.1.0.0
+synopsis:       My solutions to Haskell Programming from First Principles
+homepage:       https://github.com/rteabeault/hpffp#readme
+bug-reports:    https://github.com/rteabeault/hpffp/issues
+author:         Russell Teabeault
+maintainer:     rteabeault@gmail.com
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/rteabeault/hpffp
+
+library
+  exposed-modules:
+      Chapter10.WriteFoldFunctions
+      Chapter11.Vehicles
+      Chapter15.MadLibs
+      Chapter15.MaybeAnotherMonoid
+      Chapter15.MonoidLaws
+      Chapter15.OptionalMonoid
+      Chapter15.SemigroupExercises
+      Chapter16.ChapterExercises
+      Chapter16.FunctorQuickCheck
+      Chapter16.HeavyLifting
+      Chapter16.IgnoringPosibilities
+      Chapter16.ReplaceExperiment
+      Chapter17.BadMonoid
+      Chapter17.ChapterExercises
+      Chapter17.ConstantInstance
+      Chapter17.FixerUpper
+      Chapter17.IdentityInstance
+      Chapter17.ListApplicative
+      Chapter17.Lookups
+      Chapter17.Validation
+      Chapter18.BadMonad
+      Chapter18.ChapterExercises
+      Chapter18.EitherMonad
+      Chapter18.FmapJoin
+      Chapter18.Specializing
+      Chapter20.ChapterExercises
+      Chapter20.LibraryFunctions
+      Chapter21.ChapterExercises
+      Chapter22.Applicative
+      Chapter22.Ask
+      Chapter22.ChapterExercises
+      Chapter22.NewBeginning
+      Chapter22.ReaderMonad
+      Chapter22.ReadingComprehension
+      Chapter22.WarmingUp
+      Chapter23.FizzBuzz
+      Chapter23.State
+      Chapter23.ThrowDown
+      Chapter24.LearnParsers
+      Chapter24.ParsingFractions
+      Chapter24.UnitOfSuccess
+      Chapter25.BiFunctor
+      Chapter25.Compose
+      Chapter25.IdentityT
+      Chapter25.Twinplicative
+      Chapter26.ChapterExercises
+      Chapter26.EitherT
+      Chapter26.Exp
+      Chapter26.HitCounter
+      Chapter26.LiftMore
+      Chapter26.MaybeT
+      Chapter26.Morra
+      Chapter26.OuterInner
+      Chapter26.ReaderT
+      Chapter26.StateT
+      Chapter26.Structure
+      Chapter26.Test
+      Chapter27.ChapterExercises
+      Chapter27.CoreDump
+      Chapter27.Evaluate
+      Chapter27.Trace
+      Chapter28.ByteString
+      Chapter28.ByteStringTraps
+      Chapter28.CAF
+      Chapter28.ChapterExercises
+      Chapter28.Criterion
+      Chapter28.Map
+      Chapter28.MapVSet
+      Chapter28.NF
+      Chapter28.ProfilingMemory
+      Chapter28.ProfilingTime
+      Chapter28.Sequence
+      Chapter28.Sequence2
+      Chapter28.Set
+      Chapter28.Text
+      Chapter28.VectorBenchmark
+      Chapter28.VectorFusion
+      Chapter28.VectorSlice
+      Chapter28.VectorUpdate
+      Chapter28.WHNForNF
+      Chapter5.ManualCurrying
+      Chapter6.TypeClasses
+      Chapter7.CaseExpressions
+      Chapter7.Chapter7
+      Chapter7.ChapterExercises
+      Chapter7.HigherOrderFunctions
+      Chapter7.MatchingTuples
+      Chapter7.PointFreeStyle
+      Chapter7.RegisteredUser
+      Chapter8.ChapterExercises
+      Chapter8.Recursion
+      Chapter9.ChapterExercises
+      Chapter9.Cipher
+      Chapter9.Filtering
+      Chapter9.PatternMatching
+      Chapter9.Ranges
+      Chapter9.StandardFunctions
+  other-modules:
+      Paths_hpffp
+  hs-source-dirs:
+      src
+  build-depends:
+      QuickCheck >=2.9
+    , base >=4.7 && <5
+    , bytestring
+    , checkers
+    , containers
+    , criterion
+    , dlist
+    , mtl
+    , parsers
+    , primitive
+    , random
+    , scotty
+    , text
+    , time
+    , transformers
+    , trifecta
+    , utf8-string
+    , vector
+    , zlib
+  default-language: Haskell2010
+
+test-suite spec
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_hpffp
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      QuickCheck
+    , base
+    , checkers
+    , hpffp
+  default-language: Haskell2010
